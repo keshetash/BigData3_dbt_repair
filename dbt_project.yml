@@ -1,0 +1,20 @@
+name: repair_dbt
+version: '1.0.0'
+
+profile: repair_dbt
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  repair_dbt:
+    +materialized: view

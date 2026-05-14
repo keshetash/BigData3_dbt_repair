@@ -1,0 +1,6 @@
+repair_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: repair_service.duckdb
